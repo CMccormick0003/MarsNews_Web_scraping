@@ -109,7 +109,7 @@ Average Lowest Pressure:  Month 6, 745.054422 pascals
 Average Highest Pressure:  Month 9, 913.305970 pascals
 Plot the results as a bar chart.
 
-![image](https://github.com/CMccormick0003/MarsNews_Web_scraping/assets/120672518/7c86ca0f-633e-4941-9754-3e98520e3663)
+![image](https://github.com/CMccormick0003/MarsNews_Web_scraping/assets/120672518/1026b663-6ffd-4390-8ebd-f071e56e4656)
 
 ### About how many terrestrial (Earth) days exist in a Martian year?
 Consider how many days elapse on Earth in the time that Mars circles the Sun once.
