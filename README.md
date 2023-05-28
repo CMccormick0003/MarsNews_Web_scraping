@@ -1,11 +1,11 @@
 # MarsNews_Web_scraping
 
-# This is a full webscraping exercise and a data analysis project based on the webscraping.
+# This is a webscraping exercise and a data analysis project.
 ## Skills used in this project: collecting data, organizing data, storing data, analyzing data, and visually communicating insights
 
 # Part 1: Scrape Titles and Preview Text from Mars News
 I accessed the Mars news site link (Source accessed on 27May2023:  https://static.bc-edx.com/data/web/mars_news/index.html) and performed the following actions:
--	identified the HTML elements on the webpage (eg, HTML tables, recurring elements like multiple news articles)
+-	identified the HTML elements on the webpage (eg, recurring elements like multiple news articles)
 -	identified the id and class attributes of the HTM elements
 -	extracted webpage information using automated browsing (using Splinter)
 -	extracted webpage information using HTML parsing (using Beautiful Soup)
@@ -52,23 +52,23 @@ I accessed the Mars news site link (Source accessed on 27May2023:  https://stati
   
 # Part 2: Scrape and Analyze Mars Weather Data
 I accessed the Mars Temperature Data site link (Source accessed on 27May2023:  https://static.bc-edx.com/data/web/mars_facts/temperature.html) and performed the following actions:
--	identified the HTML elements on the webpage (eg, HTML tables, recurring elements like multiple news articles)
--	identified the id and class attributes of the HTM elements
--	extracted webpage information using automated browsing (using Splinter)
+-	identified the HTML elements on the webpage (eg, HTML table)
 -	extracted webpage information using HTML parsing (using Beautiful Soup)
+-	analyzed data using Pandas
+-	graphed data using matplotlib
 
 1.	Use automated browsing to visit the Mars Temperature Data site (https://static.bc-edx.com/data/web/mars_facts/temperature.html). 
 2.	Inspect the page to identify which elements to scrape. Use Chrome DevTools to identify which elements to scrape.  
 3.	Create a Beautiful Soup object and use it to extract the data in the HTML table.
 4.	Assemble the scraped data into a Pandas DataFrame. The columns should have the same headings as the table on the website. 
 5.	Column headings in the data table are described below:
-    o	id: identification number of a single transmission from the Curiosity rover
-    o	terrestrial_date: date on Earth
-    o	sol: number of elapsed sols (Martian days) since Curiosity landed on Mars
-    o	ls: solar longitude
-    o	month: Martian month
-    o	min_temp: minimum temperature, in Celsius, of a single Martian day (sol)
-    o	pressure: atmospheric pressure at Curiosity's location
+- id: identification number of a single transmission from the Curiosity rover
+- terrestrial_date: date on Earth
+- sol: number of elapsed sols (Martian days) since Curiosity landed on Mars
+- ls: solar longitude
+- month: Martian month
+- min_temp: minimum temperature, in Celsius, of a single Martian day (sol)
+- pressure: atmospheric pressure at Curiosity's location
 6.	Examine the data types that are currently associated with each column. 
 7.	Convert some of the data types from “object” to datetime, int or float before using them in data analyses. 
 8.	Analyze the dataset by using Pandas functions.
@@ -85,6 +85,7 @@ days_of_Mars_data = df['sol'].nunique()
 
 ### What is the average low temperature by month?
 average_low_temp_per_Mars_month = pd.DataFrame(df.groupby('month')['min_temp'].mean())
+
 ![image](https://github.com/CMccormick0003/MarsNews_Web_scraping/assets/120672518/3fdc22f9-0af5-47c9-8c7b-fef42d195722)
 
 Plot the results as a bar chart.
